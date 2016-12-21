@@ -23,6 +23,10 @@
         		<property name="date" type="java.sql.Date">
         			<column name="DATE"></column>
         		</property>
+        		
+        		<property name="img" type="blob">
+        			<column name="IMG" sql-type="longblob"></column>
+        		</property>
         	</class>
         
         </hibernate-mapping>

@@ -62,5 +62,11 @@
     	<artifactId>hibernate-core</artifactId>  
     	<version>4.2.4.Final</version>  
 	</dependency> 
+	<!--hibernate使用c3p0资源池  -->
+	<dependency>  
+    	<groupId>org.hibernate</groupId>  
+    	<artifactId>hibernate-c3p0</artifactId>  
+    	<version>4.2.4.Final</version>  
+	</dependency> 
   </dependencies>
 </project>

@@ -4,12 +4,15 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
         
         <hibernate-mapping>
-        	<class name="cn.hjycjc.spring.hibernate.helloworld.News3" table="news3">
+        	<class name="cn.hjycjc.spring.hibernate.helloworld.News3" table="news3" select-before-update="true">
         		<!--特殊  -->
-        		<id name="id" type="java.lang.Integer">
+        		<!-- <id name="id" type="java.lang.Integer" unsave-value="11"> -->
+        			<id name="id" type="java.lang.Integer">
         			<column name="ID"></column>
         			<!-- 指定主键生成方式native:数据库本地方式 -->
         			<generator class="native"></generator>
+  <!--       			hilo:主键是Hibernate的高级算法生成的 
+        			<generator class="hilo"></generator> -->
         		</id>
         		
         		<property name="title" type="java.lang.String">

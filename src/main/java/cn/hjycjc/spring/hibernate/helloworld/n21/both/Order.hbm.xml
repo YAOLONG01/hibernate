@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+        <hibernate-mapping>
+        	<class name="cn.hjycjc.spring.hibernate.helloworld.n21.both.Order" table="Order_Table">
+        		<!--特殊  -->
+        		<id name="orderId" type="java.lang.Integer">
+        			<column name="order_id"></column>
+        			<generator class="hilo"></generator>
+        		</id>
+        		
+        		<property name="orderName" type="java.lang.String">
+        			<column name="order_name"></column>
+        		</property>
+        		<!--  n21-->
+        		<many-to-one name="customer" class="cn.hjycjc.spring.hibernate.helloworld.n21.both.Customer" column="customer_id"></many-to-one>
+        	</class>
+        </hibernate-mapping>
